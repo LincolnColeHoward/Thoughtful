@@ -1,11 +1,8 @@
 {
   "name": "thoughtful",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "custom analytics module. includes mongoose models, express middleware, and client-side implemenations",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LincolnColeHoward/Thoughtful.git"
