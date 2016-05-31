@@ -1,4 +1,3 @@
 var express = require ("express");
-var router = express.Router ();
-router.use (express.static ("../assets/node"));
-module.exports = router;
+console.log (__dirname + "../assets/node");
+module.exports = express.static (__dirname + "/../assets/node");
