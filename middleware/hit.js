@@ -24,7 +24,9 @@ router.post ("/analytics/hit", function (req, res) {
 		opts.user = req.session.user.username;
 		opts.session = req.session.id;
 	}
+	console.log (opts);
 	new Instance (opts).save (function (err) {
+		console.log (err);
 		if (err) return res.status (400).end ();
 		res.status (201).end ();
 	});
