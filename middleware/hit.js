@@ -1,6 +1,6 @@
 var Instance = require ("../models/instance");
 var uaParser = require ("ua-parser-js");
-var requestIp = require ("requestIp");
+var requestIp = require ("request-ip");
 var express = require ("express");
 var router = express.Router ();
 router.use (require ("body-parser").json ());
