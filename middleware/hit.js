@@ -6,10 +6,11 @@ var router = express.Router ();
 router.use (require ("body-parser").json ());
 
 router.post ("/analytics/hit", function (req, res) {
+	console.log (req.body);
 	var ua = uaParser (req.headers ["user-agent"]);
 	var clientIp = requestIp.getClientIp (req);
 	var opts = {
-		referrer: req.body.referrer,
+		referrer: req.body.previous,
 		ip: clientIp,
 		browser: ua.browser.name,
 		device: ua.device.type,
