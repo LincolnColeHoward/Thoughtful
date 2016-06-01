@@ -3,10 +3,10 @@ onmessage = function (e) {
 	xhr.open ("POST", "/analytics/hit");
 	xhr.setRequestHeader ("Content-Type", "application/json");
 	xhr.send (JSON.stringify ({
-		category: e [0],
-		action: e [1],
-		target: e [2],
-		value: e [3],
-		previous: e [4]
+		category: e.data [0],
+		action: e.data [1],
+		target: e.data [2],
+		value: e.data [3],
+		previous: e.data [4]
 	}));
 }
