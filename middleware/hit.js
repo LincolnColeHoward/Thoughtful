@@ -7,14 +7,13 @@ router.use (require ("body-parser").json ());
 
 router.post ("/analytics/hit", function (req, res) {
 	var ua = uaParser (req.headers ["user-agent"]);
-	console.log (ua);
 	var clientIp = requestIp.getClientIp (req);
 	var opts = {
 		referrer: req.body.referrer,
 		ip: clientIp,
-		browser: ua.getBrowser ().name,
-		device: ua.getDevice ().type,
-		os: ua.getOS ().name,
+		browser: ua.browser.name,
+		device: ua.device.type,
+		os: ua.os.name,
 		site: "client",
 		category: req.body.category,
 		action: req.body.action,
