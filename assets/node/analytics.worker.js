@@ -7,6 +7,6 @@ onmessage = function (e) {
 		action: e [1],
 		target: e [2],
 		value: e [3],
-		previous: document.referrer
+		previous: e [4]
 	}));
 }

@@ -7,7 +7,8 @@ var AQ;
 			category,
 			action,
 			target,
-			value
+			value,
+			document.referrer
 		]);
 	}
 	// initial hit
