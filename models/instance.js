@@ -2,6 +2,21 @@ var mongoose = require ("mongoose");
 var Schema = mongoose.Schema;
 // schema
 var InstanceSchema = new Schema ({
+	referrer: {
+		type: String
+	},
+	ip: {
+		type: String
+	},
+	browser: {
+		type: String
+	},
+	device: {
+		type: String
+	},
+	os: {
+		type: String
+	},
 	site: {
 		type: String,
 		enum: ["mobile", "client", "server", "api"],

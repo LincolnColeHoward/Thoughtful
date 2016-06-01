@@ -10,4 +10,8 @@ var AQ;
 			value
 		]);
 	}
+	// initial hit
+	var viewcount = localStorage.viewcount || 0;
+	viewcount++;
+	AQ ("User", "View", "Homepage", viewcount);
 }())
