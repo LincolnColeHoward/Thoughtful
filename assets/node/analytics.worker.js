@@ -1,6 +1,6 @@
 onmessage = function (e) {
 	var xhr = new XMLHttpRequest ();
-	xhr.open ("POST", "/analytics/hit");
+	xhr.open ("POST", "/thoughtful/hit");
 	xhr.setRequestHeader ("Content-Type", "application/json");
 	xhr.send (JSON.stringify ({
 		category: e.data [0],

@@ -5,8 +5,7 @@ var express = require ("express");
 var router = express.Router ();
 router.use (require ("body-parser").json ());
 
-router.post ("/analytics/hit", function (req, res) {
-	console.log (req.body);
+router.post ("/thoughtful/hit", function (req, res) {
 	var ua = uaParser (req.headers ["user-agent"]);
 	var clientIp = requestIp.getClientIp (req);
 	var opts = {
@@ -25,9 +24,7 @@ router.post ("/analytics/hit", function (req, res) {
 		opts.user = req.session.user.username;
 		opts.session = req.session.id;
 	}
-	console.log (opts);
 	new Instance (opts).save (function (err) {
-		console.log (err);
 		if (err) return res.status (400).end ();
 		res.status (201).end ();
 	});
